@@ -1,0 +1,27 @@
+[
+  {
+    type: 'httpMethodChecker',
+    module : 'httpMethodChecker',
+    action : 'run',
+    groupTitle : 'Custom JS',
+    groupIcon : 'fab fa-lg fa-js comp-flows',
+    title : 'httpMethodChecker - @@var(name)@@',
+    icon : 'fas fa-lg fa-hand-paper comp-flows',
+    dataPickObject: true,
+    properties : [
+      {
+        group: 'Options',
+        variables: [
+          { name: 'name', optionName: 'name', title: 'Name', type: 'text', required: true},
+          { name: 'allowed_method', optionName: 'allowed_method', title: 'Allowed method', type: 'text', required: true, help: 'Allowed methods', serverDataBindings: true}  
+        ]
+      },
+      {
+        group: 'Output',
+        variables: [
+          { name: 'output', optionName: 'output', title: 'Output', initValue: true, defaultValue: false, type: 'boolean'}
+        ]
+      }
+    ]
+  }
+]
